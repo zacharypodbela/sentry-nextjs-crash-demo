@@ -55,6 +55,7 @@ npm run build
 npm run start
 ```
 _(Note 1: Must be run while still inside the `sentry-nextjs-crash-demo` folder)_
+_(Note 2: There is a [known Sentry issue (#3968)](https://github.com/getsentry/sentry-javascript/issues/3968) where `npm run build` doesn't read from `.sentryclirc`. You may need to set your auth token as an environment variable with `export SENTRY_AUTH_TOKEN=` to get the build to succeed if this issue remains unresolved.)
 
 2. Navigate to `localhost:3000`. (Open the Console to capture additional output.)
 3. Click the top button to cause a `ReferenceError` that **will not crash the app**. You will see the error output in the console and properly reported in Sentry.
